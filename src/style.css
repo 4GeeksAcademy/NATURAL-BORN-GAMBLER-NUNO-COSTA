@@ -17,7 +17,7 @@ body {
   display: flex;
 }
 
-#upperSuitText {
+.suitFont {
   font-size: 150px;
 }
 
@@ -38,4 +38,8 @@ body {
 #lowerSuit {
   display: flex;
   justify-content: right;
+}
+
+.red {
+  color: red;
 }
