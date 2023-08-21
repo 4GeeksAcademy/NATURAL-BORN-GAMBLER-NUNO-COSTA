@@ -1,1 +1,41 @@
 @import "~bootstrap/dist/css/bootstrap.min.css";
+/* div {
+  border-style: dashed;
+  border-color: red;
+} */
+
+body {
+  background-color: green;
+  display: flex;
+  justify-content: center;
+}
+
+.card {
+  margin-top: 10px;
+  height: 800px;
+  width: 600px;
+  display: flex;
+}
+
+#upperSuitText {
+  font-size: 150px;
+}
+
+.cardNumberText {
+  font-size: 200px;
+}
+
+#upperSuit {
+  display: flex;
+  justify-content: left;
+}
+
+#cardNumber {
+  display: flex;
+  justify-content: center;
+}
+
+#lowerSuit {
+  display: flex;
+  justify-content: right;
+}
