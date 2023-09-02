@@ -31,25 +31,47 @@ window.randomNumberGenerator = function randomNumberGenerator(anArray, number) {
 };
 
 window.suitGenerator = function suitGenerator() {
-  let randSuit = randomNumberGenerator(cardSuit, 4);
-  const suitPara = document.createElement("p");
-  const suitText = document.createTextNode(randSuit);
-  suitPara.appendChild(suitText);
-  suitPara.classList.add("suitFont");
-  document.getElementById("upperSuit").appendChild(suitPara);
-  document.getElementById("lowerSuit").appendChild(suitPara);
+  let suit = randomNumberGenerator(cardSuit, cardSuit.length);
+
+  const getUpperSuitPara = document.getElementById("upperPara");
+  const getLowerSuitPara = document.getElementById("lowerPara");
+  const getNumberPara = document.getElementById("numberPara");
+
+  if (suit === "♦" || suit === "♥") {
+    const getUpperSuit = document.getElementById("upper");
+    let upperSuitChild = getUpperSuit.firstElementChild;
+    const getLowerSuit = document.getElementById("lower");
+    let lowerSuitChild = getLowerSuit.firstElementChild;
+
+    upperSuitChild.innerHTML = suit;
+    lowerSuitChild.innerHTML = suit;
+
+    getUpperSuitPara.className = "suitFont red";
+    getLowerSuitPara.className = "suitFont red";
+    getNumberPara.className = "suitFont red";
+  } else {
+    const getUpperSuit = document.getElementById("upper");
+    let upperSuitChild = getUpperSuit.firstElementChild;
+    const getLowerSuit = document.getElementById("lower");
+    let lowerSuitChild = getLowerSuit.firstElementChild;
+
+    upperSuitChild.innerHTML = suit;
+    lowerSuitChild.innerHTML = suit;
+
+    getUpperSuitPara.className = "suitFont black";
+    getLowerSuitPara.className = "suitFont black";
+    getNumberPara.className = "suitFont black";
+  }
 };
 
 window.numberGenerator = function numberGenerator() {
-  let randNumber = randomNumberGenerator(cardNumber, 13);
-  const numberPara = document.createElement("p");
-  const numberText = document.createTextNode(randNumber);
-  numberPara.appendChild(numberText);
-  numberPara.classList.add("cardNumberText");
-  document.getElementById("cardNumber").appendChild(numberPara);
+  const getCardNumber = document.getElementById("cardNumber");
+  let cardNumberChild = getCardNumber.firstElementChild;
+  let number = randomNumberGenerator(cardNumber, cardNumber.length);
+  cardNumberChild.innerHTML = number;
 };
 
-window.turnRed = function turnRed(aTag) {
-  document.getElementsByClassName(aTag);
-  aTag.classList.add("red");
+window.deal = function deal() {
+  suitGenerator();
+  numberGenerator();
 };

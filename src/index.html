@@ -18,16 +18,18 @@
       crossorigin="anonymous"
     />
   </head>
-  <body onload="function()">
-    <div class="card">
-      <div id="upperSuit"></div>
-      <div id="cardNumber"></div>
-      <div id="lowerSuit"></div>
-    </div>
-    <div class="buttonHolder">
-      <button id="dealButton" onclick="suitGenerator(); numberGenerator()">
-        Deal!
-      </button>
+  <body>
+    <div class="divHolder">
+      <div class="card">
+        <div id="upper"><p class="suitFont" id="upperPara">♠</p></div>
+        <div id="cardNumber"><p class="suitFont" id="numberPara">A</p></div>
+        <div id="lower"><p class="suitFont" id="lowerPara">♠</p></div>
+      </div>
+      <div class="buttonHolder">
+        <button id="dealButton" onclick="deal()">
+          Deal!
+        </button>
+      </div>
     </div>
   </body>
   <script

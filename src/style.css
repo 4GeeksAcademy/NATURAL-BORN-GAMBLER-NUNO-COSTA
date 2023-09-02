@@ -25,7 +25,7 @@ body {
   font-size: 200px;
 }
 
-#upperSuit {
+#upper {
   display: flex;
   justify-content: left;
 }
@@ -35,11 +35,27 @@ body {
   justify-content: center;
 }
 
-#lowerSuit {
+#lower {
   display: flex;
   justify-content: right;
 }
 
 .red {
   color: red;
+}
+
+.black {
+  color: black;
+}
+
+.buttonHolder {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+#dealButton {
+  width: 100px;
+  height: 50px;
+  font-size: larger;
 }
